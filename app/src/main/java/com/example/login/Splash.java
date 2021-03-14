@@ -5,12 +5,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import org.w3c.dom.Text;
 
 public class Splash extends AppCompatActivity {
 
@@ -21,6 +17,14 @@ public class Splash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        /* Create default user account and add to user database
+        *  UserDatabase contains an ArrayList that holds User objects
+        * */
+        UserDatabase users = new UserDatabase();
+        User defaultUser = new User("canasb1@gmail.com", "LOGinpassword",
+                "Brian", "Canas", "05/16/1998");
+        users.addUser(defaultUser);
 
         /* Initial TextViews in splash screen will fade out */
         TextView tvWelcome = (TextView)findViewById(R.id.welcomeText);
@@ -40,6 +44,10 @@ public class Splash extends AppCompatActivity {
 
                 // Create Intent to move to next activity
                 Intent mainIntent = new Intent(Splash.this, MainActivity.class);
+
+                // Pass UserDatabase along
+                mainIntent.putExtra("userDatabase", users);
+
                 startActivity(mainIntent);
                 finish();
             }

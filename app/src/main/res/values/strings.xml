@@ -11,14 +11,15 @@
     <string name="password_confirm">Confirm Password</string>
     <string name="first_name">First name</string>
     <string name="last_name">Last name</string>
+    <string name="birthday">Birthday</string>
     <string name="dob">Birthday - MM/DD/YYYY</string>
     <string name="dob_format">MM/DD/YYYY</string>
-    <string name="go_register"><u>Are you new here? Click here to register!</u></string>
+    <string name="go_register"><u>Are you new here? Tap here to register!</u></string>
+    <string name="go_login"><u>Already a member? Tap here to LOGin!</u></string>
     <string name="grab_logs_img_desc">Putting logs together to light a campfire</string>
     <string name="cutting_tree_img_desc">Man cutting tree aggressively for logs </string>
     <string name="lets_get_logs">LETS GET THEM LOGS!!</string>
     <string name="campfire_desc">Image of a lit campfire</string>
     <string name="welcome">Welcome</string>
     <string name="logout">LOGout</string>
-
 </resources>
